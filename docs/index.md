@@ -21,7 +21,14 @@ A client-side, AI-powered contract review application. Analyze contracts, genera
 
 ## 🌟 Vision
 
-This project is an experimental frontend proof-of-concept. The real goal: build an **open-source library that enables programmatic, full-document editing and diff in `.docx`**, laying the foundation for enterprise-grade contract automation and AI-assisted workflows. Contributions that improve the current system or help explore this deeper docx engine are highly welcome.
+This project is an experimental frontend proof-of-concept. Currently, it leverages [Superdoc](https://github.com/Harbour-Enterprises/SuperDoc) for client-side `.docx` parsing and editing, allowing rapid experimentation with AI-assisted contract review and playbook generation.  
+
+The long-term vision is to build a **fully open-source library** that enables **programmatic, full-document editing and diff at the Word level**, without relying on third-party parsing frameworks. This will start with a **native Microsoft Word JavaScript API** that performs word-level diffing and precise Track Changes management, bringing the capabilities of our AI-assisted playbook engine directly into Word itself.  
+
+I’ve already prototyped this approach—check out the proof-of-concept in this demo:  
+[![YouTube Demo: MS Word Add-In for Diff](https://img.youtube.com/vi/0Oa05jk3wrU/0.jpg)](https://youtu.be/0Oa05jk3wrU?si=nbhoEMUjY41wxgOx)
+
+The ultimate goal is to **phase out Superdoc**, providing developers and organizations with a fully open, extensible, and secure solution for AI-assisted contract automation, workflow integration, and robust document diffing. Contributions that advance either the frontend proof-of-concept, the AI playbook logic, or the eventual library are highly welcome.
 
 ---
 
@@ -64,11 +71,6 @@ All of this is aimed at making AI-assisted contract review faster, more reliable
 ## 📝 Native .docx Editing & Track Changes
 
 This app works directly with Microsoft Word `.docx` files—no intermediate formats, no HTML wrappers, no lossy conversions. It currently leverages **Superdoc** for client-side parsing and editing, but the architecture, AI integration, and granular Track Changes mapping are custom.  
-
-- **Shadow Document Architecture** – The `.docx` is parsed in-browser into a lightweight JSON representation, preserving paragraphs, numbering, and metadata while remaining fully editable.  
-- **Node-Level Change Isolation** – Edits are mapped to individual paragraph or node positions, allowing AI-generated suggestions to integrate as granular insertions and deletions.  
-- **Track Changes Compatibility** – Every AI-suggested modification respects Word’s native Track Changes format, so lawyers and contract teams see real redlines exactly as if they were editing in Word.  
-- **Browser-First Implementation** – All parsing, mapping, and AI-assisted editing happen client-side, keeping your documents private and secure.
 
 - **Shadow Document Architecture** – The `.docx` is parsed in-browser into a lightweight JSON representation, preserving paragraphs, numbering, and metadata while remaining fully editable.  
 - **Node-Level Change Isolation** – Edits are mapped to individual paragraph or node positions, allowing AI-generated suggestions to integrate as granular insertions and deletions.  
