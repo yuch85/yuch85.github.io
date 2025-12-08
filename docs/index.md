@@ -4,7 +4,7 @@ title: Contract Playbook AI
 
 # Contract Playbook AI
 
-A client-side, AI-powered contract review application. Analyze contracts, generate playbooks, and redline documents natively in Microsoft Word–compatible format—all from your browser.
+A client-side, AI-powered contract review application. Analyze contracts, generate playbooks, and redline documents natively in Microsoft Word–compatible format—all from your browser. True docx Track Changes—no HTML/Markdown wrappers, fully client-side, nothing like this open source today.
 
 [![Watch the Demo](https://img.youtube.com/vi/JCCNyjN34EE/0.jpg)](https://www.youtube.com/watch?v=JCCNyjN34EE)
 
@@ -27,8 +27,53 @@ This project is an experimental frontend proof-of-concept. The real goal: build 
 
 ## 🔗 Demo & Repo
 
-- [Live Demo (YouTube)](https://www.youtube.com/watch?v=JCCNyjN34EE)  
+You can test the full Contract Playbook AI workflow — playbook extraction, review, and Word-compatible redlining — directly in your browser using your own Google AI Studio free tier.
+
+[▶️ Try the Live Demo (Runs in Your Google AI Studio Account)](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221XR53uQDCxbtkL0RnFgpY3ZxL_A1WhvVe%22%5D,%22action%22:%22open%22,%22userId%22:%22107041048597162520663%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing)
+
+After clicking the link:
+
+1. Allow access to Google Drive to load this prompt.  
+2. Agree to the Google AI Studio terms and conditions.  
+3. Click "Continue to the app" on the "This app is from another developer" screen. 
+4. Open Preview screen and run the app.  
+
+> That’s it — the entire app runs client-side, using your own Gemini API allowance.
+No installs, no backend, no API key setup. 
+> ⚠️ Google AI Studio’s free tier may change or disappear in the future, so make hay while the sun shines.  
+> For best performance, use contracts under ~10 pages as sequential LLM calls are used.
+
 - [GitHub Repository](https://github.com/yuch85/contract-playbook-ai)
+
+---
+
+## ⚡ Behind the Scenes: AI Playbook Engineering
+
+The client-side contract playbook engine is designed for speed, reliability, and real-world contracts:
+
+- **Canonical + Extensible Taxonomy** – Starts with common categories (LIABILITY, INDEMNITY, CONFIDENTIALITY, etc.) but lets the LLM propose domain-specific ones.  
+- **Smart Rule Normalization** – Fuzzy category matching, auto-generated IDs, and auto-synonyms ensure consistent, semantic rules.  
+- **Fast Local Classification** – Clauses are classified in-browser to pre-filter relevant rules before LLM calls, cutting token usage by 80–95%.  
+- **Chunking** – Segments contracts to prevent attention dilution, keeping LLM analysis accurate on long documents.  
+- **Human-Readable Intermediate Representation** – Avoids long JSON parsing errors by translating rules into natural language IR.  
+
+All of this is aimed at making AI-assisted contract review faster, more reliable, and developer-friendly—without sacrificing token efficiency or context fidelity.
+
+---
+
+## 📝 Native .docx Editing & Track Changes
+
+This app works directly with Microsoft Word `.docx` files—no intermediate formats, no HTML wrappers, no lossy conversions. It currently leverages **Superdoc** for client-side parsing and editing, but the architecture, AI integration, and granular Track Changes mapping are custom.  
+
+- **Shadow Document Architecture** – The `.docx` is parsed in-browser into a lightweight JSON representation, preserving paragraphs, numbering, and metadata while remaining fully editable.  
+- **Node-Level Change Isolation** – Edits are mapped to individual paragraph or node positions, allowing AI-generated suggestions to integrate as granular insertions and deletions.  
+- **Track Changes Compatibility** – Every AI-suggested modification respects Word’s native Track Changes format, so lawyers and contract teams see real redlines exactly as if they were editing in Word.  
+- **Browser-First Implementation** – All parsing, mapping, and AI-assisted editing happen client-side, keeping your documents private and secure.
+
+- **Shadow Document Architecture** – The `.docx` is parsed in-browser into a lightweight JSON representation, preserving paragraphs, numbering, and metadata while remaining fully editable.  
+- **Node-Level Change Isolation** – Edits are mapped to individual paragraph or node positions, allowing AI-generated suggestions to integrate as granular insertions and deletions.  
+- **Track Changes Compatibility** – Every AI-suggested modification respects Word’s native Track Changes format, so lawyers and contract teams see real redlines exactly as if they were editing in Word.  
+- **Browser-First Implementation** – All parsing, mapping, and AI-assisted editing happen client-side, keeping your documents private and secure.
 
 ---
 
@@ -40,7 +85,6 @@ Want to help push this further? Check out [CONTRIBUTING.md](https://github.com/y
 - AI playbook logic refinement  
 - Advanced docx manipulation (future library work)  
 
----
 
 ## ⚠️ Notes
 
