@@ -4,7 +4,7 @@ title: Contract Playbook AI
 
 # Contract Playbook AI
 
-A client-side, AI-powered contract review application. Analyze contracts, generate playbooks, and redline documents natively in Microsoft Word–compatible format—all from your browser. True docx Track Changes—no HTML/Markdown wrappers, fully client-side, nothing like this open source today.
+Contract Playbook AI — client-side, AI-powered contract review and playbook generation with true Word `.docx` Track Changes. Fully browser-based, no HTML/Markdown wrappers, nothing like this open source today.
 
 [![Watch the Demo](https://img.youtube.com/vi/JCCNyjN34EE/0.jpg)](https://www.youtube.com/watch?v=JCCNyjN34EE)
 
@@ -50,13 +50,12 @@ You can test the full Contract Playbook AI workflow — playbook extraction, rev
 
 After clicking the link:
 
-1. Allow access to Google Drive to load this prompt.  
-2. Agree to the Google AI Studio terms and conditions.  
-3. Click "Continue to the app" on the "This app is from another developer" screen. 
-4. Open Preview screen and run the app.  
+**1. Allow access to Google Drive to load this prompt.**  
+**2. Agree to the Google AI Studio terms and conditions.**  
+**3. Click "Continue to the app" on the "This app is from another developer" screen.**
+**4. Open Preview screen and run the app.** 
 
-> That’s it — the entire app runs client-side, using your own Gemini API allowance.
-No installs, no backend, no API key setup. 
+> That’s it — runs fully client-side using your own Gemini API allowance. No installs or backend required.
 > ⚠️ Google AI Studio’s free tier may change or disappear in the future, so make hay while the sun shines.  
 > For best performance, use contracts under ~10 pages as sequential LLM calls are used.
 
