@@ -38,7 +38,7 @@ The long-term vision is to build a **fully open-source library** that enables **
 I’ve already prototyped this approach—check out the proof-of-concept in this demo:  
 [![YouTube Demo: MS Word Add-In for Diff](https://img.youtube.com/vi/0Oa05jk3wrU/0.jpg)](https://youtu.be/0Oa05jk3wrU?si=nbhoEMUjY41wxgOx)
 
-The ultimate goal is to **phase out Superdoc**, providing developers and organizations with a fully open, extensible, and secure solution for AI-assisted contract automation, workflow integration, and robust document diffing.
+The ultimate goal is to provide developers and organizations with a fully open, extensible, and secure solution for AI-assisted contract automation, workflow integration, and robust document diffing.
 
 Contributions that advance either the frontend proof-of-concept, the AI playbook logic, or the eventual library are highly welcome.
 
