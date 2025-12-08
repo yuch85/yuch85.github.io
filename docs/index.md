@@ -15,7 +15,17 @@ A client-side, AI-powered contract review application. Analyze contracts, genera
 - **Playbook Generation** – Extract negotiation rules, risk positions, and preferred clauses from existing contracts.  
 - **Automated Contract Review** – Identify risks (Red/Yellow/Green) against a defined playbook.  
 - **Interactive Redlining** – Apply AI-suggested changes directly in a rich-text editor.  
-- **Microsoft Word Compatibility** – Parse `.docx` in-browser and export with formatting preserved.  
+- **Microsoft Word Compatibility** – Parse `.docx` in-browser and export with formatting preserved.
+
+---
+
+## 📁 Why `.docx` Matters
+
+Microsoft Word `.docx` is the de facto standard for contracts and legal documents. Lawyers, corporate legal teams, and courts rely on it for everything from clause numbering and cross-references to styles, footnotes, and Track Changes. Even small formatting or version errors can change the meaning of a contract, so preserving fidelity is critical.
+
+Many tech solutions assume Markdown, HTML, or JSON is enough—but these formats break essential legal workflows. Without true `.docx` support, you lose Track Changes, precise paragraph structure, numbering, and metadata, making redlines unreliable and collaboration error-prone.
+
+`.docx` also enables seamless collaboration across multiple parties, with consistent formatting and audit trails. Any tool that ignores it risks disrupting real-world legal workflows, which is why native `.docx` editing is indispensable.
 
 ---
 
