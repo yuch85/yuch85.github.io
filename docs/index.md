@@ -38,7 +38,9 @@ The long-term vision is to build a **fully open-source library** that enables **
 I’ve already prototyped this approach—check out the proof-of-concept in this demo:  
 [![YouTube Demo: MS Word Add-In for Diff](https://img.youtube.com/vi/0Oa05jk3wrU/0.jpg)](https://youtu.be/0Oa05jk3wrU?si=nbhoEMUjY41wxgOx)
 
-The ultimate goal is to **phase out Superdoc**, providing developers and organizations with a fully open, extensible, and secure solution for AI-assisted contract automation, workflow integration, and robust document diffing. Contributions that advance either the frontend proof-of-concept, the AI playbook logic, or the eventual library are highly welcome.
+The ultimate goal is to **phase out Superdoc**, providing developers and organizations with a fully open, extensible, and secure solution for AI-assisted contract automation, workflow integration, and robust document diffing.
+
+Contributions that advance either the frontend proof-of-concept, the AI playbook logic, or the eventual library are highly welcome.
 
 ---
 
@@ -51,8 +53,11 @@ You can test the full Contract Playbook AI workflow — playbook extraction, rev
 After clicking the link:
 
 **1. Allow access to Google Drive to load this prompt.**  
+
 **2. Agree to the Google AI Studio terms and conditions.**  
+
 **3. Click "Continue to the app" on the "This app is from another developer" screen.**
+
 **4. Open Preview screen and run the app.** 
 
 > That’s it — runs fully client-side using your own Gemini API allowance. No installs or backend required.
