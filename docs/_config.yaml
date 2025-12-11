@@ -1,7 +1,7 @@
 theme: jekyll-theme-hacker
 
-title: Contract Playbook AI
-description: Client-side, AI-powered contract review application for native Word redlining and playbook generation.
+title: Open source legal tech
+description: One of our projects: AI native Word redlining and playbook generation.
 
 github:
   is_project_page: true
