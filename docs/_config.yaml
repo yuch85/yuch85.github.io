@@ -6,3 +6,6 @@ description: One of our projects: AI native Word redlining and playbook generati
 github:
   is_project_page: false
   repository_url: https://github.com/yuch85/contract-playbook-ai
+
+plugins:
+  - jekyll-include-cache
