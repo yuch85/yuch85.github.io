@@ -1,11 +1,11 @@
 theme: jekyll-theme-hacker
 
 title: Open source legal tech
-description: "One of our projects: AI native Word redlining and playbook generation."
+description: "Open source tools for Word redlining, Singapore law research, and teaching lawyers about AI."
 
 github:
   is_project_page: false
-  repository_url: https://github.com/yuch85/contract-playbook-ai
+  repository_url: https://github.com/yuch85
 
 plugins:
   - jekyll-include-cache
